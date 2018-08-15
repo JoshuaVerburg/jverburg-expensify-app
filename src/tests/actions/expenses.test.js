@@ -63,9 +63,9 @@ test('should edit expense in firebase', () => {
             id,
             updates
         });
-        return database.ref(`expenses/${id}`).update({...updats})
+        return database.ref(`expenses/${id}`).once('values')
     }).then((snapshot) => {
-        expect(snapshot.val()).toBeFalsy();
+        expect(snapshot.val().note).toBe(updates.note);
         done();
     })
 })
