@@ -1,4 +1,4 @@
-# Project Title
+# Expensify app
 
 Simple app for keeping track of expenses. Uses React, Redux, and Firestore.
 
